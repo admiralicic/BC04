@@ -44,7 +44,7 @@ class UsersController extends Controller
             $newUser->password = $model->password;
             $newUser->save();
 
-            return $this->redirect(Yii::$app->urlManager->createUrl("users/index"));
+            return $this->redirect(array('users/index'));
         }else{
             return $this->render('newUser', ['model'=>$model]);
         }

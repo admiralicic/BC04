@@ -15,7 +15,8 @@ class UserForm extends Model
     public function rules(){
         return [
             [['full_name', 'username', 'email', 'password'], 'required'],
-            ['email', 'email']
+            ['email', 'email'],
+            ['email', 'unique']
         ];
     }
 }
